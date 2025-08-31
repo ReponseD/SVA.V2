@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects - SVA | Silicon Valley of Africa</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Remix Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
+
+  <!-- Tailwind Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#8B5CF6',    // Violet
+            secondary: '#6366F1',  // Indigo
+            neon: {
+              pink: '#EC4899',
+              blue: '#3B82F6',
+              green: '#10B981',
+              yellow: '#F59E0B'
+            },
+            dark: '#111827'
+          },
+          fontFamily: {
+            'inter': ['Inter', 'sans-serif'],
+            'poppins': ['Poppins', 'sans-serif']
+          },
+          borderRadius: {
+            'button': '8px'
+          },
+          boxShadow: {
+            'glow': '0 0 15px rgba(139, 92, 246, 0.4)',
+            'neon-pink': '0 0 20px rgba(236, 72, 153, 0.3)',
+            'neon-blue': '0 0 20px rgba(59, 130, 246, 0.3)'
+          }
+        }
+      },
+      darkMode: 'class'
+    }
+  </script>
+
+  <!-- Style: Smooth scroll and glow -->
+  <style>
+    body {
+      background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 50%, #e5e7eb 100%);
+      background-attachment: fixed;
+    }
+    .dark body {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+    }
+    .glow-button:hover {
+      box-shadow: 0 0 30px rgba(139, 92, 246, 0.5);
+    }
+    .frc-timer {
+      font-family: 'Orbitron', 'Poppins', sans-serif;
+      font-weight: 700;
+    }
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700&display=swap');
+  </style>
+</head>
+<body class="font-inter bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white transition-all duration-300">
+
+  <!-- Skip to content -->
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white px-4 py-2 rounded-button z-50">Skip to main content</a>
+
+  <!-- Header -->
+  <header role="banner" class="fixed top-0 w-full z-40 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-700">
+    <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="w-10 h-10 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center">
+          <span class="text-white font-bold text-lg">S</span>
+        </div>
+        <span class="text-2xl font-bold font-poppins">SVA</span>
+      </div>
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="index.html#about" class="hover:text-primary transition-colors">About</a>
+        <a href="team.html" class="hover:text-primary transition-colors">Team</a>
+        <a href="projects.html" class="hover:text-primary transition-colors">Projects</a>
+        <a href="index.html#sponsor" class="hover:text-primary transition-colors">Sponsor</a>
+      </div>
+      <button id="theme-toggle" class="mode-toggle p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700" aria-label="Toggle dark mode">
+        <div class="w-6 h-6 flex items-center justify-center">
+          <i class="ri-sun-line dark:hidden block"></i>
+          <i class="ri-moon-line hidden dark:block"></i>
+        </div>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main" class="pt-24 pb-20 relative z-10">
+
+    <!-- Hero Section -->
+    <section class="py-28 px-6 text-center relative overflow-hidden" data-aos="fade-in">
+      <div class="absolute inset-0 opacity-10 z-0">
+        <div class="w-full h-full bg-gradient-to-br from-primary/30 to-neon-blue/30"></div>
+      </div>
+      <div class="max-w-5xl mx-auto relative z-10">
+        <h1 class="text-5xl md:text-6xl font-bold font-poppins mb-6 bg-gradient-to-r from-primary via-neon-pink to-secondary bg-clip-text text-transparent">
+          Our Innovation Projects
+        </h1>
+        <p class="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
+          From robotics to AI, we're building the future of African technology — one project at a time.
+        </p>
+        <div class="flex flex-wrap justify-center gap-3 text-sm">
+          <span class="px-4 py-2 bg-primary/10 dark:bg-primary/20 rounded-button border border-primary/30">Robotics</span>
+          <span class="px-4 py-2 bg-secondary/10 dark:bg-secondary/20 rounded-button border border-secondary/30">AI & ML</span>
+          <span class="px-4 py-2 bg-neon-pink/10 dark:bg-neon-pink/20 rounded-button border border-neon-pink/30">STEM</span>
+          <span class="px-4 py-2 bg-neon-green/10 dark:bg-neon-green/20 rounded-button border border-neon-green/30">Hackathons</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FRC 2026 Countdown -->
+    <section class="py-20 px-6 bg-gradient-to-br from-primary/10 to-secondary/10 dark:from-primary/20 dark:to-secondary/20">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-4">FRC 2026 Countdown</h2>
+        <p class="text-lg text-gray-600 dark:text-gray-300 mb-8">Houston, Texas • April 15–19, 2026</p>
+        <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-xl border border-primary/30">
+          <div class="text-4xl frc-timer font-bold text-primary mb-4">LYRQ ROBOTICS</div>
+          <p class="text-xl text-gray-600 dark:text-gray-300 mb-6 italic">"Phos Khoinonia – Light of Fellowship"</p>
+          <div id="frc-timer" class="text-3xl md:text-4xl font-bold text-primary grid grid-cols-4 gap-4 mb-6">
+            <div><span id="days">00</span> Days</div>
+            <div><span id="hours">00</span> Hrs</div>
+            <div><span id="minutes">00</span> Mins</div>
+            <div><span id="seconds">00</span> Secs</div>
+          </div>
+          <a href="team.html" class="inline-block glow-button bg-gradient-to-r from-primary to-secondary text-white px-10 py-3 rounded-button font-semibold transition-all duration-300 hover:scale-105">
+            <i class="ri-robot-line mr-2"></i> Meet the Team
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Highlight Projects -->
+    <section class="py-20 px-6">
+      <div class="max-w-7xl mx-auto text-center mb-16" data-aos="fade-up">
+        <h2 class="text-4xl font-bold font-poppins mb-6">Our Flagship Projects</h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-8"></div>
+        <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          We build solutions that empower communities, inspire youth, and represent Africa on the global stage.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12">
+        <!-- Project 1: LYRQ Robotics -->
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden" data-aos="fade-right">
+          <div class="h-56 bg-gradient-to-br from-primary/20 to-secondary/20 relative overflow-hidden">
+            <img src="https://readdy.ai/api/search-image?query=dynamic%20robotics%20competition%20with%20african%20team%20working%20on%20a%20robot%2C%20energetic%20atmosphere%2C%20FIRST%20Robotics%2C%20FRC%202026%2C%20vibrant%20purple%20and%20blue%20lighting&width=400&height=300" alt="LYRQ Robotics" class="w-full h-full object-cover object-center">
+            <div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"></div>
+            <div class="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-button text-sm font-semibold">FRC 2026</div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-2xl font-bold mb-3">LYRQ Robotics</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">Representing Africa at the FIRST Robotics Competition 2026 in Houston. We're building a competition-ready robot from scratch — designed, coded, and engineered by Rwandan youth.</p>
+            <div class="flex items-center gap-2 text-sm text-primary mb-4">
+              <i class="ri-star-fill"></i>
+              <span>Engineering Excellence</span>
+            </div>
+            <div class="flex items-center gap-2 text-sm text-secondary mb-4">
+              <i class="ri-circuit-board-2-fill"></i>
+              <span>Hardware & Software Integration</span>
+            </div>
+            <a href="team.html" class="inline-block glow-button bg-gradient-to-r from-primary to-secondary text-white px-6 py-2 rounded-button font-semibold text-sm transition-all duration-300 hover:scale-105">
+              <i class="ri-team-line mr-2"></i> View Team
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 2: MyDoctor AI -->
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden" data-aos="fade-left">
+          <div class="h-56 bg-gradient-to-br from-neon-pink/20 to-primary/20 relative overflow-hidden">
+            <img src="https://readdy.ai/api/search-image?query=modern%20AI%20healthcare%20interface%20showing%20medical%20diagnosis%20system%2C%20clean%20white%20and%20purple%20UI%20design%2C%20african%20doctor%20using%20digital%20tablet%2C%20futuristic%20medical%20technology%2C%20professional%20healthcare%20environment&width=400&height=300" alt="MyDoctor AI" class="w-full h-full object-cover object-center">
+            <div class="absolute inset-0 bg-gradient-to-t from-neon-pink/40 to-transparent"></div>
+            <div class="absolute top-4 left-4 bg-neon-pink text-white px-3 py-1 rounded-button text-sm font-semibold">AI for Health</div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-2xl font-bold mb-3">MyDoctor AI</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">An AI-powered diagnostic assistant helping rural clinics in Rwanda detect diseases faster and more accurately using machine learning and natural language processing.</p>
+            <div class="flex items-center gap-2 text-sm text-neon-pink mb-4">
+              <i class="ri-brain-fill"></i>
+              <span>Machine Learning</span>
+            </div>
+            <div class="flex items-center gap-2 text-sm text-primary mb-4">
+              <i class="ri-shield-check-line"></i>
+              <span>Healthcare Innovation</span>
+            </div>
+            <button class="inline-block glow-button bg-gradient-to-r from-neon-pink to-primary text-white px-6 py-2 rounded-button font-semibold text-sm transition-all duration-300 hover:scale-105">
+              <i class="ri-lightbulb-flash-line mr-2"></i> Learn More
+            </button>
+          </div>
+        </div>
+
+        <!-- Project 3: WIN Hackathon -->
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden" data-aos="fade-right">
+          <div class="h-56 bg-gradient-to-br from-secondary/20 to-primary/20 relative overflow-hidden">
+            <img src="https://readdy.ai/api/search-image?query=dynamic%20hackathon%20event%20with%20young%20african%20developers%20coding%20together%2C%20energetic%20atmosphere%2C%20modern%20tech%20conference%20setup%2C%20collaborative%20workspace%20with%20laptops%20and%20screens%2C%20vibrant%20purple%20and%20blue%20lighting&width=400&height=300" alt="WIN Hackathon" class="w-full h-full object-cover object-center">
+            <div class="absolute inset-0 bg-gradient-to-t from-secondary/40 to-transparent"></div>
+            <div class="absolute top-4 left-4 bg-secondary text-white px-3 py-1 rounded-button text-sm font-semibold">STEM Outreach</div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-2xl font-bold mb-3">WIN Hackathon</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">A pan-African coding competition that brings together 500+ young developers to solve real-world problems in education, health, and agriculture.</p>
+            <div class="flex items-center gap-2 text-sm text-secondary mb-4">
+              <i class="ri-code-s-slash-line"></i>
+              <span>500+ Participants</span>
+            </div>
+            <div class="flex items-center gap-2 text-sm text-primary mb-4">
+              <i class="ri-globe-fill"></i>
+              <span>10+ African Countries</span>
+            </div>
+            <button class="inline-block glow-button bg-gradient-to-r from-secondary to-primary text-white px-6 py-2 rounded-button font-semibold text-sm transition-all duration-300 hover:scale-105">
+              <i class="ri-rocket-2-fill mr-2"></i> Join Next Event
+            </button>
+          </div>
+        </div>
+
+        <!-- Project 4: SVA Summer Camps -->
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden" data-aos="fade-left">
+          <div class="h-56 bg-gradient-to-br from-primary/20 to-secondary/20 relative overflow-hidden">
+            <img src="https://readdy.ai/api/search-image?query=african%20children%20learning%20coding%20and%20robotics%20in%20modern%20classroom%2C%20interactive%20STEM%20education%2C%20young%20students%20working%20with%20computers%20and%20robot%20kits%2C%20bright%20educational%20environment%20with%20purple%20accents&width=400&height=300" alt="SVA Summer Camps" class="w-full h-full object-cover object-center">
+            <div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"></div>
+            <div class="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-button text-sm font-semibold">Youth Empowerment</div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-2xl font-bold mb-3">SVA Summer Camps</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">Free STEM summer camps for 1000+ youth across Rwanda, teaching robotics, coding, AI, and innovation through hands-on learning.</p>
+            <div class="flex items-center gap-2 text-sm text-primary mb-4">
+              <i class="ri-team-fill"></i>
+              <span>1,000+ Students Trained</span>
+            </div>
+            <div class="flex items-center gap-2 text-sm text-secondary mb-4">
+              <i class="ri-graduation-cap-fill"></i>
+              <span>Free STEM Education</span>
+            </div>
+            <button class="inline-block glow-button bg-gradient-to-r from-primary to-secondary text-white px-6 py-2 rounded-button font-semibold text-sm transition-all duration-300 hover:scale-105">
+              <i class="ri-book-open-line mr-2"></i> Apply Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-24 px-6 text-center">
+      <div class="max-w-4xl mx-auto bg-gradient-to-br from-primary/10 to-secondary/10 dark:from-primary/20 dark:to-secondary/20 p-12 rounded-2xl border border-primary/40 backdrop-blur-sm shadow-2xl relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-primary/5 to-transparent animate-pulse"></div>
+        <h2 class="text-4xl font-bold mb-6">Join the Innovation Movement</h2>
+        <p class="text-xl text-gray-600 dark:text-gray-300 mb-8">
+          Whether you're a mentor, sponsor, or future innovator — your support powers the future of African tech.
+        </p>
+        <div class="flex flex-wrap justify-center gap-6">
+          <a href="index.html#sponsor" class="glow-button bg-gradient-to-r from-primary to-secondary text-white px-10 py-4 rounded-button font-bold text-lg transition-all duration-300 hover:scale-105 flex items-center">
+            <i class="ri-hand-heart-fill mr-2"></i> Sponsor a Project
+          </a>
+          <a href="team.html" class="border-2 border-primary text-primary hover:bg-primary hover:text-white px-10 py-4 rounded-button font-bold text-lg transition-all duration-300 flex items-center">
+            <i class="ri-robot-line mr-2"></i> Meet the Builders
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer role="contentinfo" class="bg-gray-900 dark:bg-black text-white py-12">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <div class="flex items-center space-x-3 mb-4">
+            <div class="w-10 h-10 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center">
+              <span class="text-white font-bold text-lg">S</span>
+            </div>
+            <span class="text-2xl font-bold font-poppins">SVA</span>
+          </div>
+          <p class="text-gray-400 leading-relaxed">
+            Empowering young innovators to shape the future through technology.
+          </p>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="index.html#about" class="hover:text-primary transition-colors">About Us</a></li>
+            <li><a href="team.html" class="hover:text-primary transition-colors">Our Team</a></li>
+            <li><a href="projects.html" class="hover:text-primary transition-colors">Projects</a></li>
+            <li><a href="index.html#sponsor" class="hover:text-primary transition-colors">Sponsor Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Contact</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li class="flex items-center space-x-2"><i class="ri-mail-line"></i><span>hello@sva-rwanda.org</span></li>
+            <li class="flex items-center space-x-2"><i class="ri-phone-line"></i><span>+250 788 123 456</span></li>
+            <li class="flex items-center space-x-2"><i class="ri-map-pin-line"></i><span>Kigali, Rwanda</span></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Follow Us</h4>
+          <div class="flex space-x-4">
+            <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-primary rounded-lg flex items-center justify-center transition-colors">
+              <i class="ri-twitter-line"></i>
+            </a>
+            <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-primary rounded-lg flex items-center justify-center transition-colors">
+              <i class="ri-linkedin-line"></i>
+            </a>
+            <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-primary rounded-lg flex items-center justify-center transition-colors">
+              <i class="ri-instagram-line"></i>
+            </a>
+            <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-primary rounded-lg flex items-center justify-center transition-colors">
+              <i class="ri-github-line"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 pt-8 mt-8 text-center text-gray-400 text-sm">
+        <p>&copy; 2025 SVA - Silicon Valley of Africa. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // AOS Init
+    document.addEventListener('DOMContentLoaded', function () {
+      AOS.init({
+        duration: 600,
+        easing: 'ease-out',
+        once: true,
+        offset: 50
+      });
+    });
+
+    // Theme Toggle
+    document.addEventListener('DOMContentLoaded', function () {
+      const html = document.documentElement;
+      const themeToggle = document.getElementById('theme-toggle');
+      const sunIcon = themeToggle.querySelector('.ri-sun-line');
+      const moonIcon = themeToggle.querySelector('.ri-moon-line');
+      const savedTheme = localStorage.getItem('theme') || 'light';
+
+      if (savedTheme === 'dark') {
+        html.classList.add('dark');
+        sunIcon.classList.add('hidden');
+        moonIcon.classList.remove('hidden');
+      } else {
+        html.classList.remove('dark');
+        sunIcon.classList.remove('hidden');
+        moonIcon.classList.add('hidden');
+      }
+
+      themeToggle.addEventListener('click', () => {
+        html.classList.toggle('dark');
+        const isDark = html.classList.contains('dark');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        sunIcon.classList.toggle('hidden');
+        moonIcon.classList.toggle('hidden');
+      });
+    });
+
+    // FRC 2026 Countdown Timer
+    document.addEventListener('DOMContentLoaded', function () {
+      const targetDate = new Date("April 15, 2026 00:00:00").getTime();
+
+      const daysEl = document.getElementById('days');
+      const hoursEl = document.getElementById('hours');
+      const minutesEl = document.getElementById('minutes');
+      const secondsEl = document.getElementById('seconds');
+
+      const updateTimer = () => {
+        const now = new Date().getTime();
+        const distance = targetDate - now;
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        daysEl.textContent = String(days).padStart(2, '0');
+        hoursEl.textContent = String(hours).padStart(2, '0');
+        minutesEl.textContent = String(minutes).padStart(2, '0');
+        secondsEl.textContent = String(seconds).padStart(2, '0');
+      };
+
+      updateTimer();
+      setInterval(updateTimer, 1000);
+    });
+  </script>
+
+</body>
+</html>

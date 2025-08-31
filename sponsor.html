@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sponsor Us | SVA - Silicon Valley of Africa</title>
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+
+  <!-- Google Fonts - Orbitron + Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&family=Orbitron:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Remix Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+
+  <!-- Typewriter Effect -->
+  <script src="https://cdn.jsdelivr.net/npm/typewriter-effect@2.18.0/dist/core.min.js" defer></script>
+
+  <!-- Custom Styles -->
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .font-orbitron {
+      font-family: 'Orbitron', sans-serif;
+    }
+    .youtube-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 12px;
+      margin: 2rem 0;
+    }
+    .youtube-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 12px;
+    }
+  </style>
+
+  <!-- Tailwind Config -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#8B5CF6',
+            secondary: '#6366F1',
+            accent: '#FBBF24',
+            danger: '#EC4899',
+            bronze: '#B8860B',
+            silver: '#C0C0C0',
+            gold: '#FFD700'
+          },
+          fontFamily: {
+            'poppins': ['Poppins', 'sans-serif']
+          },
+          borderRadius: {
+            'button': '8px'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="font-inter bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-all duration-300">
+
+  <!-- Skip to content -->
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white px-4 py-2 rounded-button z-50">
+    Skip to main content
+  </a>
+
+  <!-- Header -->
+  <header class="fixed top-0 w-full z-40 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-700">
+    <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="w-10 h-10 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center">
+          <span class="text-white font-bold text-lg">S</span>
+        </div>
+        <a href="index.html" class="text-2xl font-bold font-poppins">SVA</a>
+      </div>
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="index.html" class="hover:text-primary transition-colors">Home</a>
+        <a href="about.html" class="hover:text-primary transition-colors">About</a>
+        <a href="team.html" class="hover:text-primary transition-colors">Team</a>
+        <a href="robotics.html" class="hover:text-primary transition-colors">Robotics</a>
+        <a href="sponsor.html" class="hover:text-primary transition-colors">Sponsor</a>
+      </div>
+      <button id="theme-toggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800" aria-label="Toggle dark mode">
+        <i class="ri-sun-line dark:hidden"></i>
+        <i class="ri-moon-line hidden dark:block"></i>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main" class="pt-24 pb-20">
+
+    <!-- Hero Section -->
+    <section class="py-32 px-6 text-center relative overflow-hidden">
+      <div class="absolute inset-0 opacity-10 z-0">
+        <div class="w-full h-full bg-gradient-to-br from-primary/20 to-secondary/20"></div>
+      </div>
+      <div class="max-w-5xl mx-auto relative z-10">
+        <h1 class="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-500 via-pink-500 to-purple-600 bg-clip-text text-transparent font-orbitron">
+          Become a Sponsor
+        </h1>
+        <p id="typewriter" class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed"></p>
+      </div>
+    </section>
+
+    <!-- Why Sponsor Us? with Sidebar Image -->
+    <section class="py-20 px-6">
+      <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-start">
+        <!-- Image on Left -->
+        <div class="relative">
+          <img src="sva-image.jpg" alt="Lyrc Team Building Robot" class="w-full h-auto rounded-xl shadow-lg object-cover" />
+          <div class="absolute inset-0 bg-black/20 rounded-xl"></div>
+        </div>
+
+        <!-- Content on Right -->
+        <div class="space-y-6">
+          <h2 class="text-4xl font-bold mb-6">Why Sponsor Lyrc?</h2>
+          <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-8"></div>
+          <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+            We are high school students from different schools across Rwanda. In 2024, we started with the FLL competition in Kigali. That experience changed everything.
+          </p>
+          <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mt-4">
+            Now, we’re building a full-scale robot to compete in the <strong>FIRST Robotics Competition (FRC)</strong> in 2026 — one of the most prestigious robotics events in the world.
+          </p>
+          <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mt-4">
+            We don’t have a fancy lab or big sponsors — yet. But we have something stronger: <strong>passion, purpose, and the courage to try.</strong>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- YouTube Video Section -->
+    <section class="py-20 px-6">
+      <div class="max-w-6xl mx-auto text-center mb-16">
+        <h2 class="text-4xl font-bold mb-6">Watch Us Build</h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-8"></div>
+        <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          See how we're building our robot — one part at a time.
+        </p>
+      </div>
+      <div class="max-w-4xl mx-auto">
+        <div class="youtube-container">
+          <iframe 
+            width="560" 
+            height="315" 
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+            title="Lyrc Building Our Robot" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sponsorship Tiers -->
+    <section class="py-20 px-6 bg-gray-50 dark:bg-gray-800/60">
+      <div class="max-w-6xl mx-auto text-center mb-16">
+        <h2 class="text-4xl font-bold mb-6">Sponsorship Levels</h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-8"></div>
+        <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          Your support helps us build, travel, and compete. Every dollar counts.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <!-- Bronze -->
+        <div class="bg-bronze/10 backdrop-blur-sm p-8 rounded-xl border border-bronze/30 shadow-lg">
+          <h3 class="text-2xl font-bold text-bronze mb-4">Bronze Supporter</h3>
+          <div class="text-4xl font-bold mb-6"></div>
+          <ul class="space-y-3 mb-8 text-left">
+            <li class="flex items-center gap-2"><i class="ri-check-fill text-bronze"></i> Logo on our website in sponsors section</li>
+            <li class="flex items-center gap-2"><i class="ri-check-fill text-bronze"></i> Shoutout on social media</li>
+            <li class="flex items-center gap-2"><i class="ri-check-fill text-bronze"></i> Name on our robot</li>
+          </ul>
+          <a href="https://docs.google.com/forms/d/1ohRiT436Rkem2lMAu7Xpj5eBLOQ-TnW9dXc-bYNh4ac" class="block text-center bg-bronze text-white px-6 py-3 rounded-button hover:scale-105 transition-all">
+            Sponsor at Bronze
+          </a>
+        </div>
+
+        <!-- Silver -->
+        <div class="bg-silver/10 backdrop-blur-sm p-8 rounded-xl border border-silver/30 shadow-lg transform hover:scale-105 transition-transform">
+          <h3 class="text-2xl font-bold text-silver mb-4">Silver Builder</h3>
+          <div class="text-4xl font-bold mb-6"></div>
+          <ul class="space-y-3 mb-8 text-left">
+            <li class="flex items-center gap-2"><i class="ri-check-fill text-silver"></i> All Bronze benefits</li>
+            <li class="flex items-center gap-2"><i class="ri-check-fill text-silver"></i> Logo on our robot</li>
+            <li class="flex items-center gap-2"><i class="ri-check-fill text-silver"></i> Team video thank-you</li>
+            <li class="flex items-center gap-2"><i class="ri-check-fill text-silver"></i> Invitation to demo day</li>
+          </ul>
+          <a href="https://docs.google.com/forms/d/1ohRiT436Rkem2lMAu7Xpj5eBLOQ-TnW9dXc-bYNh4ac" target="_blank" class="block text-center bg-silver text-white px-6 py-3 rounded-button hover:scale-105 transition-all">
+            Sponsor at Silver
+          </a>
+        </div>
+
+        <!-- Gold -->
+        <div class="bg-gold/10 backdrop-blur-sm p-8 rounded-xl border border-gold/30 shadow-lg">
+          <h3 class="text-2xl font-bold text-gold mb-4">Gold Visionary</h3>
+          <div class="text-4xl font-bold mb-6"></div>
+          <ul class="space-y-3 mb-8 text-left">
+            <li class="flex items-center gap-2"><i class="ri-check-fill text-gold"></i> All Silver benefits</li>
+            <li class="flex items-center gap-2"><i class="ri-check-fill text-gold"></i> Named sponsor on competition pit</li>
+            <li class="flex items-center gap-2"><i class="ri-check-fill text-gold"></i> Mentorship session with team</li>
+            <li class="flex items-center gap-2"><i class="ri-check-fill text-gold"></i> Press release mention</li>
+          </ul>
+          <a href="https://docs.google.com/forms/d/1ohRiT436Rkem2lMAu7Xpj5eBLOQ-TnW9dXc-bYNh4ac" target="_blank" class="block text-center bg-gold text-white px-6 py-3 rounded-button hover:scale-105 transition-all">
+            Sponsor at Gold
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- What Your Support Funds -->
+    <section class="py-20 px-6">
+      <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <img src="robot parts.jpg" alt="Robot parts and tools" class="w-full rounded-xl shadow-lg" style="width: 400px; height: 400px; margin-left: 100px;"/>
+        </div>
+        <div class="space-y-6">
+          <h2 class="text-4xl font-bold">What Your Support Funds</h2>
+          <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mb-8"></div>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <i class="ri-checkbox-circle-fill text-primary text-2xl mt-1"></i>
+              <span><strong>Robot Parts:</strong> Motors, sensors, metal frames — everything we need to build a competition-ready robot.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="ri-checkbox-circle-fill text-primary text-2xl mt-1"></i>
+              <span><strong>Travel & Entry Fees:</strong> Airfare, visas, and registration to compete in FRC 2026.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="ri-checkbox-circle-fill text-primary text-2xl mt-1"></i>
+              <span><strong>Workshop Space:</strong> A safe place to build, test, and learn together.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="ri-checkbox-circle-fill text-primary text-2xl mt-1"></i>
+              <span><strong>Mentorship:</strong> Support from engineers and teachers who guide us.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-24 px-6 text-center">
+      <div class="max-w-3xl mx-auto bg-gradient-to-br from-primary/10 to-secondary/10 dark:from-primary/20 dark:to-secondary/20 p-10 rounded-2xl border border-primary/40 backdrop-blur-sm shadow-lg">
+        <h2 class="text-4xl font-bold mb-6">Be Part of Our Journey</h2>
+        <p class="text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          We don’t need much — just a chance. With your support, we can build the robot, travel to competitions, and show the world what Rwanda can do.
+        </p>
+        <a href="https://docs.google.com/forms/d/1ohRiT436Rkem2lMAu7Xpj5eBLOQ-TnW9dXc-bYNh4ac" target="_blank" class="inline-block bg-gradient-to-r from-primary to-secondary text-white px-12 py-4 rounded-button font-bold text-lg hover:scale-105 transition-all duration-200">
+          <i class="ri-hand-heart-fill mr-2"></i> Sponsor Us Today
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer role="contentinfo" class="bg-gray-900 dark:bg-black text-white py-12">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-8 mb-8">
+        <div>
+          <div class="flex items-center space-x-3 mb-4">
+            <div class="w-10 h-10 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center">
+              <span class="text-white font-bold text-lg">S</span>
+            </div>
+            <span class="text-2xl font-bold font-poppins">SVA</span>
+          </div>
+          <p class="text-gray-400 leading-relaxed">
+            The Silicon Valley of Africa — where Rwandan youth build the future.
+          </p>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Navigation</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="index.html" class="hover:text-primary transition-colors">Home</a></li>
+            <li><a href="about.html" class="hover:text-primary transition-colors">About</a></li>
+            <li><a href="team.html" class="hover:text-primary transition-colors">Team</a></li>
+            <li><a href="robotics.html" class="hover:text-primary transition-colors">Robotics</a></li>
+            <li><a href="sponsor.html" class="hover:text-primary transition-colors">Sponsor Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Contact</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li class="flex items-center space-x-2"><i class="ri-mail-line"></i><span>hello@sva-rwanda.org</span></li>
+            <li class="flex items-center space-x-2"><i class="ri-phone-line"></i><span>+250 788 123 456</span></li>
+            <li class="flex items-center space-x-2"><i class="ri-map-pin-line"></i><span>Kigali, Rwanda</span></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Follow</h4>
+          <div class="flex space-x-4">
+            <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-primary rounded-lg flex items-center justify-center transition-colors">
+              <i class="ri-twitter-line"></i>
+            </a>
+            <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-primary rounded-lg flex items-center justify-center transition-colors">
+              <i class="ri-linkedin-line"></i>
+            </a>
+            <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-primary rounded-lg flex items-center justify-center transition-colors">
+              <i class="ri-instagram-line"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+        <p>&copy; 2025 SVA - Silicon Valley of Africa. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Typewriter Effect
+    document.addEventListener("DOMContentLoaded", function () {
+      new Typewriter('#typewriter', {
+        strings: [
+          "Help Rwandan students build a robot and represent Africa at FRC 2026.",
+          "We have passion, purpose, and the courage to try.",
+          "Your support makes it possible."
+        ],
+        autoStart: true,
+        loop: true,
+        delay: 40,
+        deleteSpeed: 20
+      });
+    });
+
+    // Theme Toggle
+    document.addEventListener('DOMContentLoaded', function () {
+      const html = document.documentElement;
+      const themeToggle = document.getElementById('theme-toggle');
+      const savedTheme = localStorage.getItem('theme') || 'light';
+
+      if (savedTheme === 'dark') {
+        html.classList.add('dark');
+        document.querySelector('.ri-sun-line')?.classList.add('hidden');
+        document.querySelector('.ri-moon-line')?.classList.remove('hidden');
+      } else {
+        html.classList.remove('dark');
+        document.querySelector('.ri-sun-line')?.classList.remove('hidden');
+        document.querySelector('.ri-moon-line')?.classList.add('hidden');
+      }
+
+      themeToggle.addEventListener('click', () => {
+        html.classList.toggle('dark');
+        const isDark = html.classList.contains('dark');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        document.querySelector('.ri-sun-line')?.classList.toggle('hidden');
+        document.querySelector('.ri-moon-line')?.classList.toggle('hidden');
+      });
+    });
+  </script>
+</body>
+</html>

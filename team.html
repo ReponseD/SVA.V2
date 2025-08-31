@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Team - SVA | Silicon Valley of Africa</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Remix Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
+
+  <!-- Tailwind Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#8B5CF6',
+            secondary: '#6366F1'
+          },
+          fontFamily: {
+            'inter': ['Inter', 'sans-serif'],
+            'poppins': ['Poppins', 'sans-serif']
+          },
+          borderRadius: {
+            'button': '8px'
+          },
+          transitionDuration: {
+            DEFAULT: '200ms'
+          }
+        }
+      },
+      darkMode: 'class'
+    }
+  </script>
+</head>
+<body class="font-inter bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-all duration-200">
+
+  <!-- Skip to content -->
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white px-4 py-2 rounded-button z-50">Skip to main content</a>
+
+  <!-- Header -->
+  <header role="banner" class="fixed top-0 w-full z-40 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-700">
+    <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="w-10 h-10 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center">
+          <span class="text-white font-bold text-lg">S</span>
+        </div>
+        <span class="text-2xl font-bold font-poppins">SVA</span>
+      </div>
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="index.html#about" class="hover:text-primary transition-colors">About</a>
+        <a href="index.html#team" class="hover:text-primary transition-colors">Team</a>
+        <a href="index.html#projects" class="hover:text-primary transition-colors">Projects</a>
+        <a href="index.html#sponsor" class="hover:text-primary transition-colors">Sponsor</a>
+      </div>
+      <button id="theme-toggle" class="mode-toggle p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700" aria-label="Toggle dark mode">
+        <div class="w-6 h-6 flex items-center justify-center">
+          <i class="ri-sun-line dark:hidden block"></i>
+          <i class="ri-moon-line hidden dark:block"></i>
+        </div>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main" class="pt-24 pb-16 relative z-10">
+
+    <!-- Hero Section -->
+    <section class="py-20 px-6 text-center relative" data-aos="fade-in" data-aos-duration="600">
+      <div class="max-w-5xl mx-auto">
+        <h1 class="text-4xl md:text-6xl font-bold font-poppins mb-6">Meet the SVA Team</h1>
+        <p class="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
+          40+ passionate young innovators from across Rwanda, united by a shared vision of technological excellence.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4 text-sm text-gray-500 dark:text-gray-400">
+          <span class="bg-primary/10 dark:bg-primary/20 px-3 py-1 rounded-button">Robotics</span>
+          <span class="bg-secondary/10 dark:bg-secondary/20 px-3 py-1 rounded-button">AI & ML</span>
+          <span class="bg-primary/10 dark:bg-primary/20 px-3 py-1 rounded-button">Software Engineering</span>
+          <span class="bg-secondary/10 dark:bg-secondary/20 px-3 py-1 rounded-button">STEM Education</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Team -->
+    <section class="py-16 px-6">
+      <div class="max-w-6xl mx-auto text-center mb-12">
+        <h2 class="text-3xl font-bold mb-4">Leadership & Core Team</h2>
+        <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-6"></div>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 px-6">
+        <div class="text-center" data-aos="fade-up" data-aos-duration="400">
+          <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-primary/30">
+            <img src="unknown.jpg" alt="Kaleeba Ismael" class="w-full h-full object-cover">
+          </div>
+          <h3 class="text-xl font-bold">Kaleeba Ismael</h3>
+          <p class="text-primary font-medium">Team Leader</p>
+        </div>
+        <div class="text-center" data-aos="fade-up" data-aos-delay="100" data-aos-duration="400">
+          <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-secondary/30">
+            <img src="unknown.jpg" alt="Olav" class="w-full h-full object-cover">
+          </div>
+          <h3 class="text-xl font-bold">Olav</h3>
+          <p class="text-secondary font-medium">Tech Lead</p>
+        </div>
+        <div class="text-center" data-aos="fade-up" data-aos-delay="200" data-aos-duration="400">
+          <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-primary/30">
+            <img src="unknown.jpg" alt="Gaxine" class="w-full h-full object-cover">
+          </div>
+          <h3 class="text-xl font-bold">Gaxine</h3>
+          <p class="text-primary font-medium">Robotics Lead</p>
+        </div>
+        <div class="text-center" data-aos="fade-up" data-aos-delay="300" data-aos-duration="400">
+          <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-secondary/30">
+            <img src="unknown.jpg" alt="Franco" class="w-full h-full object-cover">
+          </div>
+          <h3 class="text-xl font-bold">Franco</h3>
+          <p class="text-secondary font-medium">AI Engineer</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Grid -->
+    <section class="py-16 px-6 bg-gray-50 dark:bg-gray-800/60">
+      <div class="max-w-7xl mx-auto text-center mb-12">
+        <h2 class="text-3xl font-bold mb-4">Our Full Team (40+ Members)</h2>
+        <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-6"></div>
+        <p class="text-gray-600 dark:text-gray-300 max-w-xl mx-auto">
+          A diverse group of young talents in robotics, AI, software, design, and community outreach.
+        </p>
+      </div>
+      <div class="relative max-w-7xl mx-auto flex items-center">
+        <button id="carousel-left" class="absolute left-0 z-10 bg-white dark:bg-gray-900 border border-primary/30 dark:border-secondary/30 rounded-full w-12 h-12 flex items-center justify-center shadow-lg hover:bg-primary/10 dark:hover:bg-secondary/10 transition-all duration-200">
+          <i class="ri-arrow-left-s-line text-2xl text-primary dark:text-secondary"></i>
+        </button>
+        <div id="team-grid-carousel" class="w-full px-6">
+          <!-- Teammate cards will be injected here -->
+        </div>
+        <button id="carousel-right" class="absolute right-0 z-10 bg-white dark:bg-gray-900 border border-primary/30 dark:border-secondary/30 rounded-full w-12 h-12 flex items-center justify-center shadow-lg hover:bg-primary/10 dark:hover:bg-secondary/10 transition-all duration-200">
+          <i class="ri-arrow-right-s-line text-2xl text-primary dark:text-secondary"></i>
+        </button>
+      </div>
+      <!-- Modal -->
+      <div id="teammate-modal" class="fixed inset-0 bg-black/50 z-50 flex items-center justify-center hidden">
+        <div class="bg-white dark:bg-gray-900 rounded-xl shadow-2xl max-w-lg w-full p-8 relative">
+          <button id="close-modal" class="absolute top-4 right-4 text-gray-500 hover:text-primary dark:hover:text-secondary text-2xl">
+            <i class="ri-close-line"></i>
+          </button>
+          <div id="modal-content"></div>
+        </div>
+      </div>
+    </section>
+    <script>
+      // Sample 40 teammates
+      const teammates = Array.from({length: 40}, (_, i) => ({
+        name: `Member ${i+1}`,
+        age: 16 + (i%5),
+        school: `School ${i+1}`,
+        story: `A passionate innovator contributing to SVA's mission.`,
+        competencies: ["Software Dev","Mechanical Eng","AI Researcher","Electronics","UX Designer","Project Mgr","Data Science","Robotics"][i%8],
+        role: ["Software Dev","Mechanical Eng","AI Researcher","Electronics","UX Designer","Project Mgr","Data Science","Robotics"][i%8],
+        img: "unknown.jpg"
+      }));
+      const gridCarousel = document.getElementById('team-grid-carousel');
+      let startIdx = 0;
+      // Show 3 rows per slide, each row has 4 columns (desktop), 3 columns (tablet), 2 columns (mobile)
+      function getCols() {
+        if(window.innerWidth >= 1024) return 4;
+        if(window.innerWidth >= 768) return 3;
+        return 2;
+      }
+      function getRows() {
+        return 2;
+      }
+      function renderGridCarousel() {
+        gridCarousel.innerHTML = '';
+        gridCarousel.style.transition = '';
+        gridCarousel.style.transform = '';
+        const cols = getCols();
+        const rows = getRows();
+        const perSlide = cols * rows;
+        for(let r=0; r<rows; r++) {
+          const rowDiv = document.createElement('div');
+          rowDiv.className = `grid grid-cols-${cols} gap-8 mb-8`;
+          for(let c=0; c<cols; c++) {
+            const idx = startIdx + r*cols + c;
+            if(idx >= teammates.length) break;
+            const t = teammates[idx];
+            const card = document.createElement('div');
+            card.className = `text-center flex flex-col items-center`;
+            card.innerHTML = `
+              <div class="w-24 h-24 mx-auto mb-3 rounded-full overflow-hidden border-2 border-primary/20 flex items-center justify-center bg-primary/10">
+                <img src="${t.img}" alt="${t.name}" class="w-full h-full object-cover object-top rounded-full">
+              </div>
+              <h3 class="text-lg font-semibold">${t.name}</h3>
+              <p class="text-xs text-gray-500 dark:text-gray-400">${t.role}</p>
+              <button class="view-details-btn bg-gradient-to-r from-primary to-secondary text-white px-5 py-2 rounded-button font-semibold text-xs transition-all duration-300 mt-3 hover:scale-105" data-idx="${idx}">
+                View Details
+              </button>
+            `;
+            rowDiv.appendChild(card);
+          }
+          gridCarousel.appendChild(rowDiv);
+        }
+        // Add click listeners for view details
+        gridCarousel.querySelectorAll('.view-details-btn').forEach(btn => {
+          btn.onclick = function(e) {
+            const idx = parseInt(btn.getAttribute('data-idx'));
+            const t = teammates[idx];
+            const modal = document.getElementById('teammate-modal');
+            const modalContent = document.getElementById('modal-content');
+            modalContent.innerHTML = `
+              <div class="mb-4 flex flex-col items-center">
+                <div class="w-24 h-24 mb-2 rounded-full overflow-hidden bg-primary/10 flex items-center justify-center border-4 border-primary/30">
+                  <img src="${t.img}" alt="${t.name}" class="w-full h-full object-cover object-top rounded-full">
+                </div>
+                <h2 class="text-2xl font-bold mb-1">${t.name}</h2>
+                <span class="text-primary font-semibold">${t.role}</span>
+              </div>
+              <div class="mb-2"><span class="font-semibold">Age:</span> ${t.age}</div>
+              <div class="mb-2"><span class="font-semibold">School:</span> ${t.school}</div>
+              <div class="mb-2"><span class="font-semibold">Competencies:</span> ${t.competencies}</div>
+              <div class="mb-4"><span class="font-semibold">Story:</span> <span class="text-gray-700 dark:text-gray-300">${t.story}</span></div>
+              <button class="bg-gradient-to-r from-primary to-secondary text-white px-6 py-2 rounded-button font-semibold text-sm transition-all duration-300 hover:scale-105 w-full mt-2">
+                Sponsor ${t.name}
+              </button>
+            `;
+            modal.classList.remove('hidden');
+            document.getElementById('close-modal').onclick = function(){
+              modal.classList.add('hidden');
+            };
+            modal.onclick = function(e){
+              if(e.target === modal){
+                modal.classList.add('hidden');
+              }
+            };
+          };
+        });
+      }
+      renderGridCarousel();
+      document.getElementById('carousel-left').onclick = function() {
+        const cols = getCols();
+        const rows = getRows();
+        const perSlide = cols * rows;
+        startIdx = Math.max(0, startIdx - perSlide);
+        renderGridCarousel();
+      };
+      document.getElementById('carousel-right').onclick = function() {
+        const cols = getCols();
+        const rows = getRows();
+        const perSlide = cols * rows;
+        startIdx = Math.min(teammates.length - perSlide, startIdx + perSlide);
+        renderGridCarousel();
+      };
+      window.addEventListener('resize', () => {
+        startIdx = 0;
+        renderGridCarousel();
+      });
+    </script>
+
+    <!-- Team Roles & Stats -->
+    <section class="py-16 px-6">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div data-aos="fade-right" data-aos-duration="500">
+            <img src="sva-image.jpg" alt="SVA Team Working" class="w-full h-80 object-cover rounded-2xl shadow-lg">
+          </div>
+          <div data-aos="fade-left" data-aos-duration="500">
+            <h2 class="text-3xl font-bold mb-6">What We Do</h2>
+            <div class="space-y-4">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                  <i class="ri-robot-line text-primary"></i>
+                </div>
+                <div>
+                  <h3 class="font-semibold">Robotics & Engineering</h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400">Designing and building competition-ready robots</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-secondary/10 rounded-lg flex items-center justify-center">
+                  <i class="ri-brain-line text-secondary"></i>
+                </div>
+                <div>
+                  <h3 class="font-semibold">AI & Innovation</h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400">Developing AI solutions for African challenges</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                  <i class="ri-team-line text-primary"></i>
+                </div>
+                <div>
+                  <h3 class="font-semibold">Community Outreach</h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400">Training 1000+ youth in STEM skills</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Join Team -->
+    <section class="py-20 px-6 text-center" data-aos="fade-up" data-aos-duration="500">
+      <div class="max-w-2xl mx-auto bg-white/70 dark:bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-primary/40 shadow-lg">
+        <h2 class="text-3xl font-bold mb-4">Join Our Team</h2>
+        <p class="text-gray-600 dark:text-gray-300 mb-6">
+          Are you a young innovator passionate about tech, robotics, or AI? We're always looking for new talent!
+        </p>
+        <a href="mailto:hello@sva-rwanda.org" class="inline-block glow-button bg-gradient-to-r from-primary to-secondary text-white px-8 py-3 rounded-button font-bold text-sm transition-all duration-200 hover:scale-105">
+          <i class="ri-team-fill mr-2"></i> Apply Now
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer role="contentinfo" class="bg-gray-900 dark:bg-black text-white py-10">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-6 text-sm">
+        <div>
+          <div class="flex items-center space-x-3 mb-3">
+            <div class="w-8 h-8 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center">
+              <span class="text-white text-sm font-bold">S</span>
+            </div>
+            <span class="text-lg font-bold font-poppins">SVA</span>
+          </div>
+          <p class="text-gray-400 leading-relaxed">
+            Empowering young innovators to shape the future through technology.
+          </p>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-3">Quick Links</h4>
+          <ul class="space-y-1 text-gray-400 text-sm">
+            <li><a href="index.html#about" class="hover:text-primary transition-colors">About Us</a></li>
+            <li><a href="index.html#team" class="hover:text-primary transition-colors">Our Team</a></li>
+            <li><a href="index.html#projects" class="hover:text-primary transition-colors">Projects</a></li>
+            <li><a href="index.html#sponsor" class="hover:text-primary transition-colors">Sponsor Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-3">Contact</h4>
+          <ul class="space-y-1 text-gray-400 text-sm">
+            <li class="flex items-center space-x-2"><i class="ri-mail-line text-xs"></i><span>hello@sva-rwanda.org</span></li>
+            <li class="flex items-center space-x-2"><i class="ri-phone-line text-xs"></i><span>+250 788 123 456</span></li>
+            <li class="flex items-center space-x-2"><i class="ri-map-pin-line text-xs"></i><span>Kigali, Rwanda</span></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-3">Follow Us</h4>
+          <div class="flex space-x-3">
+            <a href="#" class="w-8 h-8 bg-gray-800 hover:bg-primary rounded-lg flex items-center justify-center transition-colors">
+              <i class="ri-twitter-line text-xs"></i>
+            </a>
+            <a href="#" class="w-8 h-8 bg-gray-800 hover:bg-primary rounded-lg flex items-center justify-center transition-colors">
+              <i class="ri-linkedin-line text-xs"></i>
+            </a>
+            <a href="#" class="w-8 h-8 bg-gray-800 hover:bg-primary rounded-lg flex items-center justify-center transition-colors">
+              <i class="ri-instagram-line text-xs"></i>
+            </a>
+            <a href="#" class="w-8 h-8 bg-gray-800 hover:bg-primary rounded-lg flex items-center justify-center transition-colors">
+              <i class="ri-github-line text-xs"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 pt-6 mt-8 text-center text-gray-400 text-xs">
+        <p>&copy; 2025 SVA - Silicon Valley of Africa. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // AOS Init
+    document.addEventListener('DOMContentLoaded', function () {
+      AOS.init({
+        duration: 400,
+        easing: 'ease-out',
+        once: true,
+        offset: 30
+      });
+    });
+
+    // Theme Toggle with Icon Swap
+    document.addEventListener('DOMContentLoaded', function () {
+      const html = document.documentElement;
+      const themeToggle = document.getElementById('theme-toggle');
+      const sunIcon = themeToggle.querySelector('.ri-sun-line');
+      const moonIcon = themeToggle.querySelector('.ri-moon-line');
+      const savedTheme = localStorage.getItem('theme') || 'light';
+
+      if (savedTheme === 'dark') {
+        html.classList.add('dark');
+        sunIcon.classList.remove('block');
+        sunIcon.classList.add('hidden');
+        moonIcon.classList.remove('hidden');
+      } else {
+        html.classList.remove('dark');
+        sunIcon.classList.remove('hidden');
+        moonIcon.classList.add('hidden');
+      }
+
+      themeToggle.addEventListener('click', () => {
+        html.classList.toggle('dark');
+        const isDark = html.classList.contains('dark');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+
+        sunIcon.classList.toggle('hidden');
+        moonIcon.classList.toggle('hidden');
+      });
+    });
+  </script>
+
+</body>
+</html>

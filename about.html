@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Full Story - SVA | Silicon Valley of Africa</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&family=Orbitron:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Remix Icons (Full CDN) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
+
+  <!-- Typewriter Effect -->
+  <script src="https://cdn.jsdelivr.net/npm/typewriter-effect@2.18.0/dist/core.min.js" defer></script>
+
+  <!-- Tailwind Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#8B5CF6',
+            secondary: '#6366F1',
+            neon: {
+              pink: '#EC4899',
+              blue: '#3B82F6',
+              violet: '#7C3AED'
+            }
+          },
+          fontFamily: {
+            'inter': ['Inter', 'sans-serif'],
+            'poppins': ['Poppins', 'sans-serif'],
+            'orbitron': ['Orbitron', 'sans-serif']
+          },
+          borderRadius: {
+            'button': '8px',
+            'xl': '16px'
+          },
+          boxShadow: {
+            'glow': '0 0 15px rgba(139, 92, 246, 0.4)',
+            'neon-pink': '0 0 20px rgba(236, 72, 153, 0.5)',
+            'neon-blue': '0 0 20px rgba(59, 130, 246, 0.5)'
+          },
+          transitionDuration: {
+            DEFAULT: '200ms',  // Reduced from 300ms
+            '300': '200ms'
+          }
+        }
+      },
+      darkMode: 'class'
+    }
+  </script>
+</head>
+
+<!-- Default: light mode (no 'dark' class) -->
+<body class="font-inter bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-all duration-200">
+
+  <!-- Skip to content -->
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white px-4 py-2 rounded-button z-50">Skip to main content</a>
+
+  <!-- Floating Background Icons (using Remix Icons) -->
+  <div class="fixed inset-0 pointer-events-none opacity-5 z-0">
+    <i class="ri-rocket-2-fill text-primary absolute top-1/4 left-10 text-4xl animate-pulse"></i>
+    <i class="ri-circuit-board-2-fill text-neon-blue absolute bottom-1/3 right-10 text-6xl animate-bounce"></i>
+    <i class="ri-refresh-line text-neon-pink absolute top-1/2 left-1/3 text-3xl animate-spin"></i>
+  </div>
+
+  <!-- Header (Same as index.html) -->
+  <header role="banner" class="fixed top-0 w-full z-40 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-700">
+    <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="w-10 h-10 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center">
+          <span class="text-white font-bold text-lg">S</span>
+        </div>
+        <span class="text-2xl font-bold font-poppins">SVA</span>
+      </div>
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="index.html" class="hover:text-primary transition-colors">Home</a>
+        <a href="index.html#about" class="hover:text-primary transition-colors">About</a>
+        <a href="index.html#team" class="hover:text-primary transition-colors">Team</a>
+        <a href="index.html#projects" class="hover:text-primary transition-colors">Projects</a>
+        <a href="index.html#sponsor" class="hover:text-primary transition-colors">Sponsor</a>
+      </div>
+      <button id="theme-toggle" class="mode-toggle p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700" aria-label="Toggle dark mode">
+        <div class="w-6 h-6 flex items-center justify-center">
+          <i class="ri-sun-line dark:hidden"></i>
+          <i class="ri-moon-line hidden dark:block"></i>
+        </div>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main" class="pt-24 pb-20 relative z-10">
+
+    <!-- 🔮 Hero Section -->
+    <section class="py-32 px-6 text-center relative overflow-hidden" data-aos="fade-in" data-aos-duration="600">
+      <div class="absolute inset-0 opacity-10 z-0">
+        <div class="w-full h-full bg-gradient-to-br from-primary/20 to-neon-blue/20"></div>
+      </div>
+      <div class="max-w-5xl mx-auto relative z-10">
+        <h1 class="text-5xl md:text-7xl font-bold font-orbitron mb-6 bg-gradient-to-r from-primary via-neon-pink to-neon-blue bg-clip-text text-transparent">
+          Our Full Story
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8">
+          The Vision, The Zeal, The Future of Tech in Africa.
+        </p>
+        <p id="typewriter" class="text-lg text-gray-500 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed"></p>
+      </div>
+    </section>
+    <section class="py-20 px-6" data-aos="fade-up">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <!-- Image Placeholder -->
+    <div class="relative">
+      <img src="sva-image.jpg" alt="SVA Team" class="w-full h-auto rounded-xl shadow-lg object-cover border-2 border-primary/30" />
+      <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-xl"></div>
+    </div>
+
+    <!-- Content -->
+    <div class="space-y-6">
+      <h2 class="text-4xl font-bold mb-6">Who We Are</h2>
+      <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-8" style="margin-right: 400px;"></div>
+      <p class="text-gray-700 dark:text-gray-200 leading-relaxed">
+        We are a community of passionate high school students from across Rwanda, united by a shared dream: to prove that African youth can lead in technology and innovation.
+      </p>
+      <p class="text-gray-700 dark:text-gray-200 leading-relaxed">
+        We call ourselves the <strong>Silicon Valley of Africa (SVA)</strong> not because we’ve made it yet — but because we believe it’s possible. We’re building a future where Rwandan students don’t just participate in global tech — they shape it.
+      </p>
+      <p class="text-gray-700 dark:text-gray-200 leading-relaxed">
+        Through robotics, coding, and problem-solving, we’re empowering ourselves and others to think like engineers, act like leaders, and build like innovators.
+      </p>
+    </div>
+  </div>
+</section>
+
+    <!-- 🚀 Mission & Vision -->
+    <section class="py-20 px-6">
+      <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
+        <div class="bg-gradient-to-br from-primary/5 to-violet-100 dark:from-primary/10 dark:to-violet-900/30 p-8 rounded-xl border border-primary/30 shadow-lg backdrop-blur-sm" data-aos="slide-right" data-aos-duration="600">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
+              <i class="ri-rocket-2-fill text-white"></i>
+            </div>
+            <h3 class="text-2xl font-bold">Our Mission</h3>
+          </div>
+          <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+            To empower African youth with cutting-edge technology, innovation, and entrepreneurial skills, enabling them to solve local challenges and compete globally.
+          </p>
+          <div class="mt-6 w-full bg-gray-200 dark:bg-gray-800 rounded-full h-2">
+            <div class="bg-gradient-to-r from-primary to-secondary h-2 rounded-full" style="width:5%"></div>
+          </div>
+        </div>
+
+        <div class="bg-gradient-to-br from-secondary/5 to-blue-100 dark:from-secondary/10 dark:to-blue-900/30 p-8 rounded-xl border border-secondary/30 shadow-lg backdrop-blur-sm transform hover:scale-105 transition-transform duration-200" data-aos="slide-left" data-aos-duration="600">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 bg-secondary rounded-full flex items-center justify-center">
+              <i class="ri-lightbulb-flash-fill text-2xl text-white"></i>
+            </div>
+            <h3 class="text-2xl font-bold">Our Vision</h3>
+          </div>
+          <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+            To build Africa’s first true innovation ecosystem — a Silicon Valley born from African soil, talent, and ambition.
+          </p>
+          <div class="mt-6 w-full bg-gray-200 dark:bg-gray-800 rounded-full h-2">
+            <div class="bg-gradient-to-r from-secondary to-neon-blue h-2 rounded-full" style="width: 1%"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 🌍 Core Values -->
+    <section class="py-20 px-6">
+      <div class="max-w-6xl mx-auto text-center mb-16">
+        <h2 class="text-4xl font-bold font-poppins mb-6">Our Core Values</h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-8"></div>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="bg-white/70 dark:bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-primary/50 transition-all duration-200 hover:shadow-lg hover:shadow-primary/20" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500">
+          <div class="w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="ri-hand-heart-fill text-2xl text-white"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Integrity</h3>
+          <p class="text-gray-600 dark:text-gray-400">We lead with honesty, transparency, and accountability in everything we do.</p>
+        </div>
+        <div class="bg-white/70 dark:bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-neon-blue/50 transition-all duration-200 hover:shadow-lg hover:shadow-neon-blue/20" data-aos="fade-up" data-aos-delay="100" data-aos-duration="500">
+          <div class="w-16 h-16 bg-gradient-to-r from-neon-blue to-primary rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="ri-brain-fill text-2xl text-white"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Innovation</h3>
+          <p class="text-gray-600 dark:text-gray-400">We challenge the status quo and build the future through bold ideas.</p>
+        </div>
+        <div class="bg-white/70 dark:bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-neon-pink/50 transition-all duration-200 hover:shadow-lg hover:shadow-neon-pink/20" data-aos="fade-up" data-aos-delay="150" data-aos-duration="500">
+          <div class="w-16 h-16 bg-gradient-to-r from-neon-pink to-primary rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="ri-group-fill text-2xl text-white"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Collaboration</h3>
+          <p class="text-gray-600 dark:text-gray-400">We believe greatness is built together — across borders, disciplines, and generations.</p>
+        </div>
+        <div class="bg-white/70 dark:bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-violet-500/50 transition-all duration-200 hover:shadow-lg hover:shadow-violet-500/20" data-aos="fade-up" data-aos-delay="200" data-aos-duration="500">
+          <div class="w-16 h-16 bg-gradient-to-r from-violet-500 to-neon-blue rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="ri-lightbulb-flash-fill text-2xl text-white"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Creativity</h3>
+          <p class="text-gray-600 dark:text-gray-400">We solve problems with imagination, artistry, and fearless thinking.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 🧑‍💻 Founders -->
+    <section class="py-20 px-6">
+      <div class="max-w-6xl mx-auto text-center mb-16">
+        <h2 class="text-4xl font-bold mb-6">Meet Our Founders</h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-8"></div>
+      </div>
+      <div class="grid md:grid-cols-2 gap-12">
+        <div class="bg-white/70 dark:bg-white/5 backdrop-blur-sm p-8 rounded-xl border border-primary/30 shadow-xl hover:shadow-primary/30 transition-shadow duration-200" data-aos="zoom-in" data-aos-duration="500">
+          <img src="unknown.jpg" alt="Kaleeba Ismael" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover border-2 border-primary">
+          <h3 class="text-2xl font-bold">Kaleeba Ismael</h3>
+          <p class="text-primary font-medium mb-4">Co-Founder & Visionary</p>
+          <p class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
+            A relentless innovator from Kigali, driving SVA's mission to put African tech on the global map.
+          </p>
+        </div>
+        <div class="bg-white/70 dark:bg-white/5 backdrop-blur-sm p-8 rounded-xl border border-secondary/30 shadow-xl hover:shadow-neon-blue/30 transition-shadow duration-200" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="500">
+          <img src="unknown.jpg" alt="Olav" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover border-2 border-secondary">
+          <h3 class="text-2xl font-bold">Olav</h3>
+          <p class="text-secondary font-medium mb-4">Co-Founder & Tech Lead</p>
+          <p class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
+            A robotics prodigy and coder, leading the engineering charge for SVA’s FRC 2026 dream.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROBOTICS -->
+   <section class="py-20 px-6 bg-gray-50 dark:bg-gray-800/60" data-aos="fade-up">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <!-- Content -->
+    <div class="space-y-6">
+      <h2 class="text-4xl font-bold mb-6">Our Robotics Team: Lyrc</h2>
+      <div class="w-25 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-8" style="width: 420px; margin-right: 300px;"></div>
+      <p class="text-gray-700 dark:text-gray-200 leading-relaxed">
+        We formed <strong>Lyrc "Phos Khoinonia"</strong> after our experience in the FLL competition in Rwanda. Inspired by what we learned, we decided to take the next step: building a full-scale robot to compete in the <strong>FIRST Robotics Competition (FRC) 2026</strong>.
+      </p>
+      <p class="text-gray-700 dark:text-gray-200 leading-relaxed">
+        Our name, Greek for <em>"Light of Fellowship"</em>, reflects our belief that innovation happens best when we work together — across schools, backgrounds, and disciplines.
+      </p>
+      <p class="text-gray-700 dark:text-gray-200 leading-relaxed">
+        As students from different high schools across Rwanda, we meet regularly to design, build, and program robots that solve real-world challenges. Our dream? To represent Africa on the global stage in Houston, Texas.
+      </p>
+    </div>
+
+    <!-- Image Placeholder -->
+    <div class="relative">
+      <img src="sva-image.jpg" alt="Lyrc Robotics Team" class="w-full h-auto rounded-xl shadow-lg object-cover border-2 border-secondary/30" />
+      <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-xl"></div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- 💎 Milestones Timeline -->
+    <section class="py-20 px-6 relative">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-12" data-aos="fade-up" data-aos-duration="500">Our Journey</h2>
+        <div class="relative">
+          <div class="absolute left-6 top-0 w-0.5 h-full bg-gradient-to-b from-primary to-secondary"></div>
+          <div class="space-y-12">
+            <div class="flex items-start gap-6" data-aos="fade-right" data-aos-duration="500">
+              <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0 z-10">
+                <i class="ri-star-fill text-white"></i>
+              </div>
+              <div class="bg-white/70 dark:bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-primary/30 flex-1">
+                <h3 class="text-xl font-bold text-primary">2023</h3>
+                <p class="text-gray-700 dark:text-gray-300">Each of us participating in FLL and FTC representing their schools.</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start gap-6" data-aos="fade-left" data-aos-duration="500">
+              <div class="w-12 h-12 bg-violet-500 rounded-full flex items-center justify-center flex-shrink-0 z-10">
+                <i class="ri-flag-fill text-white"></i>
+              </div>
+              <div class="bg-white/70 dark:bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-violet-500/30 flex-1">
+                <h3 class="text-xl font-bold text-violet-400">2024</h3>
+                <p class="text-gray-700 dark:text-gray-300">Union of all our talents from our diffrent schools to reach something big!</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-6" data-aos="fade-right" data-aos-duration="500">
+              <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0 z-10">
+                <i class="ri-star-fill text-white"></i>
+              </div>
+              <div class="bg-white/70 dark:bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-primary/30 flex-1">
+                <h3 class="text-xl font-bold text-primary">2025</h3>
+                <p class="text-gray-700 dark:text-gray-300">Preparing for the competition.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-6" data-aos="fade-left" data-aos-duration="500">
+              <div class="w-12 h-12 bg-violet-500 rounded-full flex items-center justify-center flex-shrink-0 z-10">
+                <i class="ri-trophy-fill text-white"></i>
+              </div>
+              <div class="bg-white/70 dark:bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-violet-500/30 flex-1">
+                <h3 class="text-xl font-bold text-violet-400">2026</h3>
+                <p class="text-gray-700 dark:text-gray-300">Representing Africa at FIRST Robotics Competition in Houston.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- MISSION -->
+     <section class="py-20 px-6" data-aos="fade-up">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
+    <div class="bg-gradient-to-br from-primary/5 to-violet-100 dark:from-primary/10 dark:to-violet-900/30 p-8 rounded-xl border border-primary/30 shadow-lg">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
+          <i class="ri-rocket-2-fill text-white"></i>
+        </div>
+        <h3 class="text-2xl font-bold">Our Mission</h3>
+      </div>
+      <p class="text-gray-700 dark:text-gray-200 leading-relaxed">
+        To empower Rwandan youth with hands-on experience in robotics, engineering, and STEM — so they can solve real problems and compete on the world stage.
+      </p>
+    </div>
+    <div class="bg-gradient-to-br from-secondary/5 to-blue-100 dark:from-secondary/10 dark:to-blue-900/30 p-8 rounded-xl border border-secondary/30 shadow-lg">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-10 h-10 bg-secondary rounded-full flex items-center justify-center">
+          <i class="ri-lightbulb-flash-fill text-2xl text-white"></i>
+        </div>
+        <h3 class="text-2xl font-bold">Our Vision</h3>
+      </div>
+      <p class="text-gray-700 dark:text-gray-200 leading-relaxed">
+        To create Africa’s first true innovation hub — where young minds from across the continent come together to learn, build, and lead.
+      </p>
+    </div>
+  </div>
+</section>
+    <!-- 🧠 Quote Wall -->
+    <section class="py-20 px-6 bg-gray-50 dark:bg-gray-800/60">
+      <div class="max-w-5xl mx-auto text-center mb-16">
+        <h2 class="text-4xl font-bold mb-6">Voices of SVA</h2>
+        <p class="text-gray-600 dark:text-gray-400">What our team says about building the future.</p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="border border-primary/30 rounded-xl p-6 hover:shadow-lg hover:shadow-primary/20 transition-all duration-200" data-aos="flip-up" data-aos-duration="500">
+          <blockquote class="text-lg text-gray-700 dark:text-gray-200 italic">"The future is bright"</blockquote>
+          <div class="mt-4 text-right">
+            <div class="font-semibold">Gaxine</div>
+            <div class="text-sm text-gray-500 dark:text-gray-400">Leader</div>
+          </div>
+        </div>
+        <div class="border border-secondary/30 rounded-xl p-6 hover:shadow-lg hover:shadow-neon-blue/20 transition-all duration-200" data-aos="flip-up" data-aos-delay="100" data-aos-duration="500">
+          <blockquote class="text-lg text-gray-700 dark:text-gray-200 italic">"We are trying to shape the future of different youth minds."</blockquote>
+          <div class="mt-4 text-right">
+            <div class="font-semibold">Franco</div>
+            <div class="text-sm text-gray-500 dark:text-gray-400">Leader</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 📥 Join Mission CTA -->
+    <section class="py-24 px-6 text-center" data-aos="fade-up" data-aos-duration="600">
+      <div class="max-w-3xl mx-auto bg-gradient-to-br from-primary/10 to-secondary/10 dark:from-primary/20 dark:to-secondary/20 p-12 rounded-2xl border border-primary/40 backdrop-blur-sm shadow-lg relative overflow-hidden">
+        <h2 class="text-4xl font-bold mb-6">Join the Movement</h2>
+        <p class="text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          Be part of Africa’s tech revolution. Whether you're a mentor, sponsor, or future innovator — your place is here.
+        </p>
+        <a href="index.html#sponsor" class="inline-block glow-button bg-gradient-to-r from-primary to-secondary text-white px-12 py-4 rounded-button font-bold text-lg transition-all duration-200 hover:scale-105">
+          <i class="ri-hand-heart-fill mr-2"></i> Join the Movement
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer (Same as index.html) -->
+  <footer role="contentinfo" class="bg-gray-900 dark:bg-black text-white py-12">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-8 mb-8">
+        <div>
+          <div class="flex items-center space-x-3 mb-4">
+            <div class="w-10 h-10 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center">
+              <span class="text-white font-bold text-lg">S</span>
+            </div>
+            <span class="text-2xl font-bold font-poppins">SVA</span>
+          </div>
+          <p class="text-gray-400 leading-relaxed">
+            Silicon Valley of Africa - Empowering young innovators to shape the future through technology.
+          </p>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="index.html#about" class="hover:text-primary transition-colors">About Us</a></li>
+            <li><a href="index.html#team" class="hover:text-primary transition-colors">Our Team</a></li>
+            <li><a href="index.html#projects" class="hover:text-primary transition-colors">Projects</a></li>
+            <li><a href="index.html#sponsor" class="hover:text-primary transition-colors">Sponsor Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Contact</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li class="flex items-center space-x-2">
+              <div class="w-4 h-4 flex items-center justify-center">
+                <i class="ri-mail-line"></i>
+              </div>
+              <span>hello@sva-rwanda.org</span>
+            </li>
+            <li class="flex items-center space-x-2">
+              <div class="w-4 h-4 flex items-center justify-center">
+                <i class="ri-phone-line"></i>
+              </div>
+              <span>+250 788 123 456</span>
+            </li>
+            <li class="flex items-center space-x-2">
+              <div class="w-4 h-4 flex items-center justify-center">
+                <i class="ri-map-pin-line"></i>
+              </div>
+              <span>Kigali, Rwanda</span>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Follow Us</h4>
+          <div class="flex space-x-4">
+            <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-primary rounded-lg flex items-center justify-center transition-colors">
+              <div class="w-5 h-5 flex items-center justify-center">
+                <i class="ri-twitter-line"></i>
+              </div>
+            </a>
+            <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-primary rounded-lg flex items-center justify-center transition-colors">
+              <div class="w-5 h-5 flex items-center justify-center">
+                <i class="ri-linkedin-line"></i>
+              </div>
+            </a>
+            <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-primary rounded-lg flex items-center justify-center transition-colors">
+              <div class="w-5 h-5 flex items-center justify-center">
+                <i class="ri-instagram-line"></i>
+              </div>
+            </a>
+            <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-primary rounded-lg flex items-center justify-center transition-colors">
+              <div class="w-5 h-5 flex items-center justify-center">
+                <i class="ri-github-line"></i>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+        <p>&copy; 2025 SVA - Silicon Valley of Africa. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Typewriter Effect
+    document.addEventListener("DOMContentLoaded", function () {
+      new Typewriter('#typewriter', {
+        strings: [
+          "From a FLL regionals in Kigali to representing Africa on the world stage in FRC.",
+          "We code. We build. We innovate. We rise.",
+          "This is how Africa's tech revolution begins in youth."
+        ],
+        autoStart: true,
+        loop: true,
+        delay: 40,
+        deleteSpeed: 20
+      });
+    });
+
+    // AOS Init
+    document.addEventListener('DOMContentLoaded', function () {
+      AOS.init({
+        duration: 500,
+        easing: 'ease-out',
+        once: true,
+        offset: 50
+      });
+    });
+
+    // Theme Toggle (Light mode by default)
+    document.addEventListener('DOMContentLoaded', function () {
+      const html = document.documentElement;
+      const themeToggle = document.getElementById('theme-toggle');
+      const savedTheme = localStorage.getItem('theme') || 'light'; // Default to light
+
+      if (savedTheme === 'dark') {
+        html.classList.add('dark');
+        document.querySelector('.ri-sun-line')?.classList.remove('hidden');
+        document.querySelector('.ri-moon-line')?.classList.add('hidden');
+      } else {
+        html.classList.remove('dark');
+        document.querySelector('.ri-sun-line')?.classList.add('hidden');
+        document.querySelector('.ri-moon-line')?.classList.remove('hidden');
+      }
+
+      themeToggle.addEventListener('click', () => {
+        html.classList.toggle('dark');
+        const isDark = html.classList.contains('dark');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+
+        document.querySelector('.ri-sun-line')?.classList.toggle('hidden');
+        document.querySelector('.ri-moon-line')?.classList.toggle('hidden');
+      });
+    });
+  </script>
+
+</body>
+</html>
