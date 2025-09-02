@@ -10,6 +10,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+  <!-- Font Awesome for hamburger icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <script>
     tailwind.config = {
       theme: {
@@ -135,26 +137,50 @@
 
   <!-- Header -->
   <header role="banner" class="fixed top-0 w-full z-40 transition-all duration-300" id="header">
-    <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between relative">
       <div class="flex items-center space-x-3">
         <div class="w-10 h-10 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center">
           <span class="text-white font-bold text-lg" id="logo-text">S</span>
         </div>
         <span class="text-2xl font-bold font-poppins text-white" id="logo-name">SVA</span>
       </div>
+      <!-- Desktop Nav -->
       <div class="hidden md:flex items-center space-x-8">
         <a href="#home" class="nav-link active text-white hover:text-primary transition-colors" id="home-link">Home</a>
         <a href="#about" class="nav-link text-white hover:text-primary transition-colors" id="about-link">About</a>
         <a href="#team" class="nav-link text-white hover:text-primary transition-colors" id="team-link">Team</a>
         <a href="#robotics" class="nav-link text-white hover:text-primary transition-colors" id="robotics-link">Robotics</a>
         <a href="#sponsor" class="nav-link text-white hover:text-primary transition-colors" id="sponsor-link">Sponsor</a>
+        <button id="theme-toggle" class="mode-toggle p-2 rounded-lg bg-gray-800 hover:bg-gray-700 text-white ml-4" aria-label="Toggle dark mode">
+          <div class="w-6 h-6 flex items-center justify-center">
+            <i class="ri-sun-line dark:hidden block"></i>
+            <i class="ri-moon-line hidden dark:block"></i>
+          </div>
+        </button>
       </div>
-      <button id="theme-toggle" class="mode-toggle p-2 rounded-lg bg-gray-800 hover:bg-gray-700 text-white" aria-label="Toggle dark mode">
-        <div class="w-6 h-6 flex items-center justify-center">
-          <i class="ri-sun-line dark:hidden block"></i>
-          <i class="ri-moon-line hidden dark:block"></i>
-        </div>
-      </button>
+      <!-- Mobile: Hamburger left, theme toggle right -->
+      <div class="flex md:hidden items-center w-auto space-x-2">
+        <button id="mobile-menu-toggle" class="p-2 rounded-lg bg-gray-800 hover:bg-gray-700 text-white focus:outline-none" aria-label="Open menu">
+          <i class="fa-solid fa-bars" style="color: #ffffff; font-size: 1.7rem;"></i>
+        </button>
+        <button id="theme-toggle-mobile" class="mode-toggle p-2 rounded-lg bg-gray-800 hover:bg-gray-700 text-white ml-2" aria-label="Toggle dark mode">
+          <div class="w-6 h-6 flex items-center justify-center">
+            <i class="ri-sun-line dark:hidden block"></i>
+            <i class="ri-moon-line hidden dark:block"></i>
+          </div>
+        </button>
+      </div>
+      <!-- Mobile Nav Menu -->
+      <div id="mobile-menu" class="fixed inset-0 bg-white dark:bg-gray-900/95 z-50 flex flex-col items-center justify-center space-y-8 text-gray-900 dark:text-white text-2xl font-semibold transition-all duration-300 opacity-0 pointer-events-none md:hidden">
+        <button id="mobile-menu-close" class="absolute top-6 right-6 text-3xl p-2 bg-gray-800 dark:bg-gray-700 rounded-lg" aria-label="Close menu">
+          <i class="fa-solid fa-xmark" style="color: #ffffff;"></i>
+        </button>
+        <a href="#home" class="block nav-link" onclick="closeMobileMenu()">Home</a>
+        <a href="#about" class="block nav-link" onclick="closeMobileMenu()">About</a>
+        <a href="#team" class="block nav-link" onclick="closeMobileMenu()">Team</a>
+        <a href="#robotics" class="block nav-link" onclick="closeMobileMenu()">Robotics</a>
+        <a href="#sponsor" class="block nav-link" onclick="closeMobileMenu()">Sponsor</a>
+      </div>
     </nav>
   </header>
 
@@ -620,7 +646,45 @@
   </footer>
 
   <!-- Scripts -->
-   <script>
+  <script>
+    // Hamburger menu logic
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileMenuClose = document.getElementById('mobile-menu-close');
+    function openMobileMenu() {
+      mobileMenu.style.opacity = '1';
+      mobileMenu.style.pointerEvents = 'auto';
+    }
+    function closeMobileMenu() {
+      mobileMenu.style.opacity = '0';
+      mobileMenu.style.pointerEvents = 'none';
+    }
+    if (mobileMenuToggle && mobileMenu && mobileMenuClose) {
+      mobileMenuToggle.addEventListener('click', openMobileMenu);
+      mobileMenuClose.addEventListener('click', closeMobileMenu);
+      // Close menu on link click
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', closeMobileMenu);
+      });
+    }
+    // Theme toggle for both desktop and mobile
+    function toggleTheme() {
+      const html = document.documentElement;
+      html.classList.toggle('dark');
+      localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+    }
+    const themeToggleDesktop = document.getElementById('theme-toggle');
+    const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+    if (themeToggleDesktop) themeToggleDesktop.addEventListener('click', toggleTheme);
+    if (themeToggleMobile) themeToggleMobile.addEventListener('click', toggleTheme);
+    // Set theme on load
+    document.addEventListener('DOMContentLoaded', function() {
+      const html = document.documentElement;
+      const savedTheme = localStorage.getItem('theme') || 'light';
+      if (savedTheme === 'dark') html.classList.add('dark');
+      else html.classList.remove('dark');
+    });
+  </script>
   // Add blur effect to navbar as soon as scrolling starts
   window.addEventListener('scroll', function () {
     const header = document.getElementById('header');
